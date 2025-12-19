@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smat Emeralds Ltd - Premium metal fabrication, NC laser cutting, and security facilities in Enugu, Nigeria. Forging strength, engineering security, creating possibilities.">
+    <meta name="keywords" content="metal fabrication Nigeria, NC laser cutting Enugu, security facilities, steel works, gates, burglary proofing">
+    <title>Smat Emeralds Ltd | Precision Metal Fabrication & Security Solutions</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #0D5C4B;
+            --emerald-dark: #094038;
+            --charcoal: #1A1A1A;
+            --graphite: #2D2D2D;
+            --steel: #8B9A9B;
+            --steel-light: #B8C4C4;
+            --soft-white: #F8F9FA;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-emerald-brand {
+            background-color: var(--emerald);
+        }
+
+        .bg-charcoal {
+            background-color: var(--charcoal);
+        }
+
+        .bg-graphite {
+            background-color: var(--graphite);
+        }
+
+        .text-emerald-brand {
+            color: var(--emerald);
+        }
+
+        .text-steel {
+            color: var(--steel);
+        }
+
+        .border-emerald-brand {
+            border-color: var(--emerald);
+        }
+
+        /* Hero background with overlay */
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(13, 92, 75, 0.85) 0%, rgba(26, 26, 26, 0.92) 100%),
+                        url('https://www.colstanprofiles.co.uk/wp-content/uploads/2024/10/Laser-Cutting-1.jpg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animated gradient line */
+        .gradient-line {
+            background: linear-gradient(90deg, var(--emerald), var(--steel-light), var(--emerald));
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Hover effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(13, 92, 75, 0.15);
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(13, 92, 75, 0.5);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(255,255,255,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #fff;
+        }
+
+        /* Steel texture pattern */
+        .steel-texture {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.03"/></svg>');
+        }
+
+        /* Portfolio grid */
+        .portfolio-item {
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            background: linear-gradient(to top, rgba(13, 92, 75, 0.95) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        /* WhatsApp button */
+        .whatsapp-float {
+            animation: pulse-green 2s infinite;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Spark animation for hero */
+        .spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: spark-fall 2s ease-out infinite;
+        }
+
+        @keyframes spark-fall {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(100px) scale(0); }
+        }
+
+        /* Form input styling */
+        .form-input {
+            transition: all 0.3s ease;
+            border: 1.5px solid #E5E7EB;
+        }
+
+        .form-input:focus {
+            border-color: var(--emerald);
+            box-shadow: 0 0 0 3px rgba(13, 92, 75, 0.1);
+        }
+
+        /* Counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* TextPressure (interactive hero headline) */
+        @font-face {
+            font-family: 'Compressa VF';
+            src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2') format('woff2');
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .text-pressure {
+            position: relative;
+            width: 100%;
+            max-width: 48rem;
+            user-select: none;
+        }
+
+        .text-pressure-title {
+            font-family: 'Compressa VF', 'Playfair Display', serif;
+            text-transform: uppercase;
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+
+        .tp-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .tp-char {
+            display: inline-block;
+            will-change: font-variation-settings, opacity;
+            cursor: pointer;
+        }
+
+        /* Make the whole TextPressure area feel interactive */
+        .text-pressure,
+        .text-pressure-title {
+            cursor: pointer;
+        }
+
+        .tp-space {
+            width: 0.45em;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tp-char {
+                transition: none !important;
+            }
+        }
+
+        /* Cursor / touch trail canvas */
+        #cursor-trail {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 45; /* below navbar (50) but above content */
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #cursor-trail { display: none; }
+        }
+
+    </style>
+</head>
+<body class="bg-white antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="https://i.pinimg.com/736x/88/6d/ca/886dca094d6a2e1a01ea1049f735afe0.jpg" alt="Smat Emeralds Logo" class="h-16 w-auto object-contain rounded-lg bg-white p-1">
+                    <div>
+                        <span class="font-display font-bold text-xl text-white">SMAT</span>
+                        <span class="text-emerald-300 text-sm block -mt-1 tracking-widest">EMERALDS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Home</a>
+                    <a href="#about" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">About</a>
+                    <a href="#services" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Services</a>
+                    <a href="#portfolio" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Portfolio</a>
+                    <a href="#why-us" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Why Us</a>
+                    <a href="#contact" class="btn-primary text-white px-6 py-2.5 rounded text-sm font-medium tracking-wide">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-charcoal lg:hidden">
+        <div class="flex justify-end p-6">
+            <button id="mobile-menu-close" class="text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center space-y-8 pt-12">
+            <a href="#home" class="text-white text-2xl font-display mobile-nav-link">Home</a>
+            <a href="#about" class="text-white text-2xl font-display mobile-nav-link">About</a>
+            <a href="#services" class="text-white text-2xl font-display mobile-nav-link">Services</a>
+            <a href="#portfolio" class="text-white text-2xl font-display mobile-nav-link">Portfolio</a>
+            <a href="#why-us" class="text-white text-2xl font-display mobile-nav-link">Why Us</a>
+            <a href="#contact" class="btn-primary text-white px-8 py-3 rounded text-lg font-medium mt-4 mobile-nav-link">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated sparks -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="spark" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+            <div class="spark" style="left: 70%; top: 25%; animation-delay: 0.5s;"></div>
+            <div class="spark" style="left: 85%; top: 40%; animation-delay: 1s;"></div>
+            <div class="spark" style="left: 15%; top: 60%; animation-delay: 1.5s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 reveal">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-white/80 text-sm tracking-wide">Precision Engineering Since Establishment</span>
+                </div>
+
+                <!-- Headline (TextPressure) -->
+                <div id="hero-text-pressure" class="text-pressure mb-6 reveal" style="transition-delay: 0.1s;" aria-label="Forging Strength. Engineering Security. Creating Possibilities.">
+                    <h1 id="tp-title" class="text-pressure-title font-bold leading-tight">
+                        <div class="tp-line" data-line-color="#FFFFFF" data-line-text="Forging Strength."></div>
+                        <div class="tp-line" data-line-color="var(--emerald-300, #6ee7b7)" data-line-text="Engineering Security."></div>
+                        <div class="tp-line" data-line-color="#FFFFFF" data-line-text="Creating Possibilities."></div>
+                    </h1>
+                </div>
+
+                <!-- Sub-headline -->
+                <p class="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed reveal" style="transition-delay: 0.2s;">
+                    At Smat Emeralds Ltd, we transform steel into precision-engineered solutions — combining advanced NC laser cutting, expert metal fabrication, and security innovation for modern spaces.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
+                    <a href="#contact" class="btn-primary text-white px-8 py-4 rounded text-center font-medium tracking-wide">
+                        Request a Consultation
+                    </a>
+                    <a href="#portfolio" class="btn-outline text-white px-8 py-4 rounded text-center font-medium tracking-wide">
+                        Explore Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 reveal" style="transition-delay: 0.5s;">
+            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-3 bg-white/60 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-charcoal py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x divide-white/10">
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Registered Nigerian Company <span class="text-emerald-400">(RC 1375893)</span></span>
+                </div>
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Based in Enugu, Nigeria</span>
+                </div>
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Serving Residential, Commercial & Institutional Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Snapshot -->
+    <section class="py-24 lg:py-32 bg-soft-white steel-texture" style="background-color: var(--soft-white);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">Our Philosophy</span>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8 leading-tight">
+                        Metal, Engineered<br>With Intention
+                    </h2>
+                    <div class="w-20 h-1 gradient-line mb-8"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Smat Emeralds Ltd was founded on a simple belief — that metal, when engineered with intention, becomes more than structure. It becomes <span class="text-emerald-brand font-medium">security</span>, <span class="text-emerald-brand font-medium">identity</span>, and <span class="text-emerald-brand font-medium">legacy</span>.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        From precision laser-cut designs to robust security installations, Smat Emeralds stands at the intersection of craftsmanship and technology.
+                    </p>
+                    <a href="#about" class="inline-flex items-center space-x-2 text-emerald-brand font-medium hover:space-x-4 transition-all">
+                        <span>Discover Our Story</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="reveal-right relative">
+                    <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
+                        <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source src="https://v1.pinimg.com/videos/mc/expMp4/5f/16/fa/5f16fa08ab995af6412b64bbafb17081_t1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/20">
+                            <div class="text-center text-white/90">
+                                <p class="text-sm tracking-widest font-bold border border-white/30 px-4 py-2 rounded backdrop-blur-md">PRECISION ENGINEERING</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating stats card -->
+                    <div class="absolute -bottom-8 -left-8 bg-white rounded-lg shadow-xl p-6 reveal" style="transition-delay: 0.3s;">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-emerald-brand/10 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-display font-bold text-charcoal">NC Laser</p>
+                                <p class="text-gray-500 text-sm">Precision Cutting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">What We Do</span>
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+                    Comprehensive Industrial Solutions
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    From concept to completion, we deliver precision-engineered solutions that stand the test of time.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- NC Laser Cutting -->
+                <div class="card-hover bg-gray-50 rounded-xl p-8 reveal" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-emerald-brand rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-charcoal mb-3">NC Laser Cutting</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Precision without compromise. Micron-level accuracy for intricate designs and flawless finishes.</p>
+                    <div class="w-12 h-0.5 bg-emerald-brand"></div>
+                </div>
+
+                <!-- Metal Fabrication -->
+                <div class="card-hover bg-gray-50 rounded-xl p-8 reveal" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-emerald-brand rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-charcoal mb-3">Metal Fabrication</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Gates, rails, tanks, and structural steel. Every piece crafted to exacting standards.</p>
+                    <div class="w-12 h-0.5 bg-emerald-brand"></div>
+                </div>
+
+                <!-- Security Facilities -->
+                <div class="card-hover bg-gray-50 rounded-xl p-8 reveal" style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 bg-emerald-brand rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-charcoal mb-3">Security Facilities</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Burglary proofing and secure enclosures designed for maximum protection and aesthetics.</p>
+                    <div class="w-12 h-0.5 bg-emerald-brand"></div>
+                </div>
+
+                <!-- Advisory Services -->
+                <div class="card-hover bg-gray-50 rounded-xl p-8 reveal" style="transition-delay: 0.4s;">
+                    <div class="w-14 h-14 bg-emerald-brand rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-charcoal mb-3">Advisory Services</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Technical guidance and project support from concept through completion.</p>
+                    <div class="w-12 h-0.5 bg-emerald-brand"></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="#services-detail" class="inline-flex items-center space-x-2 text-emerald-brand font-medium hover:space-x-4 transition-all text-lg">
+                    <span>View Full Services</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section id="services-detail" class="py-24 lg:py-32 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- NC Laser Cutting Detail -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="reveal-left order-2 lg:order-1">
+                    <span class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-4 block">Service 01</span>
+                    <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">NC Laser Cutting</h3>
+                    <div class="w-20 h-1 gradient-line mb-6"></div>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Our NC laser cutting services deliver micron-level accuracy, enabling intricate designs, reduced waste, and flawless finishes — ideal for architectural, decorative, and industrial applications.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>High precision cuts with minimal material waste</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Complex patterns and intricate designs</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Fast turnaround for time-sensitive projects</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal-right order-1 lg:order-2">
+                    <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative group">
+                        <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source src="https://www.colstanprofiles.co.uk/wp-content/uploads/2024/10/Colstan-Profiles-Laser-Cutting.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
+                            <div class="text-center text-white/90 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
+                                <p class="tracking-widest text-xs font-bold">LASER PRECISION</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metal Fabrication Detail -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="reveal-left">
+                    <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
+                        <img src="https://i.pinimg.com/1200x/8a/2c/c1/8a2cc19d9d3c729dcd148f211cb33127.jpg" alt="Metal fabrication workshop" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
+                            <div class="text-center text-white/90 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
+                                <p class="tracking-widest text-xs font-bold">FABRICATION CRAFT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <span class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-4 block">Service 02</span>
+                    <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">Metal Fabrication</h3>
+                    <div class="w-20 h-1 gradient-line mb-6"></div>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        From grand entrance gates to industrial tanks and structural steel, our fabrication services combine traditional craftsmanship with modern precision. Every weld, every bend, every finish reflects our commitment to excellence.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Custom gates and railings</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Storage tanks and containers</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Structural steel for construction</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Security Facilities Detail -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left order-2 lg:order-1">
+                    <span class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-4 block">Service 03</span>
+                    <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">Security Facilities</h3>
+                    <div class="w-20 h-1 gradient-line mb-6"></div>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Security that doesn't compromise aesthetics. Our burglary proofing and secure enclosures are engineered to protect what matters most while seamlessly integrating with your architectural vision.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Burglary-proof windows and doors</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Secure perimeter fencing</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-300">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Safe rooms and secure enclosures</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal-right order-1 lg:order-2">
+                    <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
+                        <img src="https://i.pinimg.com/1200x/a2/26/c8/a226c8228ca9733d1df26646bb0a7b51.jpg" alt="Security facilities installation" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
+                            <div class="text-center text-white/90 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
+                                <p class="tracking-widest text-xs font-bold">SECURITY SOLUTIONS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="reveal-left">
+                    <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">Our Story</span>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8 leading-tight">
+                        Built on Skill.<br>
+                        Driven by Purpose.
+                    </h2>
+                    <div class="w-20 h-1 gradient-line mb-8"></div>
+                    <div class="prose prose-lg text-gray-600 space-y-6">
+                        <p>
+                            From our roots in Enugu, Nigeria, Smat Emeralds Ltd has grown through unwavering commitment to skill, discipline, and innovation. What began as a vision to elevate metal fabrication in Nigeria has evolved into a comprehensive industrial solutions company.
+                        </p>
+                        <p>
+                            Our transition from basic fabrication to NC laser precision represents more than technological advancement — it symbolizes our dedication to giving Nigerian clients access to world-class capabilities, right here at home.
+                        </p>
+                        <p>
+                            Every project we undertake is built on a foundation of safety, quality, and client trust. We don't just deliver products; we forge partnerships that last.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-8 reveal-right">
+                    <!-- Mission -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-emerald-brand">
+                        <h3 class="font-display text-xl font-bold text-charcoal mb-3">Our Mission</h3>
+                        <p class="text-gray-600">To deliver precision-engineered metal solutions that exceed expectations, combining cutting-edge technology with time-honored craftsmanship to serve Nigeria's growing infrastructure needs.</p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-emerald-brand">
+                        <h3 class="font-display text-xl font-bold text-charcoal mb-3">Our Vision</h3>
+                        <p class="text-gray-600">To be West Africa's most trusted name in metal fabrication and security solutions, setting the standard for quality, innovation, and professionalism in the industry.</p>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="bg-emerald-brand rounded-xl p-8 text-white">
+                        <h3 class="font-display text-xl font-bold mb-6">Core Values</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                                    <span class="text-lg">⚡</span>
+                                </div>
+                                <span class="font-medium">Precision</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                                    <span class="text-lg">🤝</span>
+                                </div>
+                                <span class="font-medium">Integrity</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                                    <span class="text-lg">💡</span>
+                                </div>
+                                <span class="font-medium">Innovation</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                                    <span class="text-lg">✓</span>
+                                </div>
+                                <span class="font-medium">Reliability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 lg:py-32 bg-soft-white" style="background-color: var(--soft-white);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">Our Work</span>
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+                    Projects That Speak
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Each project tells a story of precision, dedication, and exceptional craftsmanship.
+                </p>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
+                <button class="portfolio-filter active px-6 py-2 rounded-full text-sm font-medium bg-emerald-brand text-white transition-all" data-filter="all">All Projects</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-emerald-brand hover:text-white transition-all" data-filter="residential">Residential</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-emerald-brand hover:text-white transition-all" data-filter="commercial">Commercial</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-emerald-brand hover:text-white transition-all" data-filter="security">Security</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="residential">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/1200x/07/ae/02/07ae02b696aae5b12928e28fd189ec9a.jpg" alt="Private Estate Gate" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Residential</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">Private Estate Gate</h4>
+                        <p class="text-white/70 text-sm">Automated sliding gate with custom laser-cut design elements</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="commercial" style="transition-delay: 0.1s;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/1200x/b2/ad/d6/b2add69747c4415e51623c58c0c7d27c.jpg" alt="Office Complex Railings" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Commercial</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">Office Complex Railings</h4>
+                        <p class="text-white/70 text-sm">Contemporary stainless steel railings for corporate headquarters</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="security" style="transition-delay: 0.2s;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/736x/89/33/bd/8933bdb3d037f0da6acf7b34313f7931.jpg" alt="Bank Security Installation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Security</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">Bank Security Installation</h4>
+                        <p class="text-white/70 text-sm">High-security vault doors and burglary-proof enclosures</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="residential" style="transition-delay: 0.3s;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/736x/34/fd/5e/34fd5e8c780c4ed962093d471e95a23d.jpg" alt="Luxury Villa Balustrade" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Residential</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">Luxury Villa Balustrade</h4>
+                        <p class="text-white/70 text-sm">Decorative laser-cut patterns with powder-coated finish</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="commercial" style="transition-delay: 0.4s;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/736x/21/44/b0/2144b0a1a0a3952a2c46bc981efab940.jpg" alt="Industrial Storage Tank" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Commercial</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">Industrial Storage Tank</h4>
+                        <p class="text-white/70 text-sm">Custom fabricated water storage solution for manufacturing plant</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="security" style="transition-delay: 0.5s;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://i.pinimg.com/736x/5d/18/cb/5d18cb49e2f6ba27f5eb9908b72a9567.jpg" alt="School Perimeter Security" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2">Security</span>
+                        <h4 class="text-white font-display text-xl font-bold mb-2">School Perimeter Security</h4>
+                        <p class="text-white/70 text-sm">Comprehensive security fencing with controlled access points</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">The Smat Difference</span>
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+                    Why Choose Smat Emeralds
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    We don't just meet expectations — we forge new standards of excellence.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">Registered & Accountable</h3>
+                            <p class="text-gray-600">Fully registered with the Corporate Affairs Commission (RC 1375893). We operate with transparency and legal accountability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">Modern Equipment</h3>
+                            <p class="text-gray-600">NC laser cutting technology and modern fabrication tools ensure precision and efficiency in every project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">Skilled Technicians</h3>
+                            <p class="text-gray-600">Our team combines years of experience with continuous training to deliver exceptional craftsmanship.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.4s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">Clear Communication</h3>
+                            <p class="text-gray-600">We keep you informed at every stage, ensuring your vision is understood and executed precisely.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.5s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">On-Time Delivery</h3>
+                            <p class="text-gray-600">We respect your timelines and deliver projects on schedule without compromising quality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.6s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-charcoal mb-2">Nigerian-Built, Globally Minded</h3>
+                            <p class="text-gray-600">Proudly African, with quality standards that compete on the world stage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-emerald-brand relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="diagonal" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 0 10 L 10 0" stroke="white" stroke-width="0.5" fill="none"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#diagonal)"/>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 reveal">
+            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Build Something Strong?
+            </h2>
+            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
+                Let's discuss your project. Whether it's a custom gate, industrial installation, or comprehensive security solution, we're here to help.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-emerald-brand px-8 py-4 rounded font-medium hover:bg-gray-100 transition-colors">
+                    Request a Consultation
+                </a>
+                <a href="https://wa.me/2348037925736" class="border-2 border-white text-white px-8 py-4 rounded font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center space-x-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal-left">
+                    <span class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-4 block">Get in Touch</span>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                        Let's Build<br>Something Strong.
+                    </h2>
+                    <div class="w-20 h-1 gradient-line mb-8"></div>
+                    <p class="text-gray-400 text-lg mb-10">
+                        Ready to start your project? We'd love to hear from you. Reach out through any of the channels below or fill out the form.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Visit Our Facility</h4>
+                                <p class="text-gray-400">KM 3 Enugu–Port Harcourt Expressway,<br>Independence Layout, Enugu, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Call Us</h4>
+                                <p class="text-gray-400">+234 803 792 5736</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Email Us</h4>
+                                <p class="text-gray-400">smatemerald@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/2348037925736" target="_blank" rel="noreferrer" class="inline-flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-lg mt-10 transition-colors whatsapp-float">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span class="font-medium">Quick Chat on WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="bg-graphite rounded-2xl p-8 lg:p-10">
+                        <h3 class="font-display text-2xl font-bold text-white mb-6">Send Us a Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-400 text-sm mb-2">Full Name</label>
+                                    <input type="text" name="name" required class="form-input w-full bg-charcoal border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-sm mb-2">Phone Number</label>
+                                    <input type="tel" name="phone" required class="form-input w-full bg-charcoal border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none" placeholder="+234...">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-sm mb-2">Email Address</label>
+                                <input type="email" name="email" required class="form-input w-full bg-charcoal border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-sm mb-2">Project Type</label>
+                                <select name="project_type" class="form-input w-full bg-charcoal border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none">
+                                    <option value="">Select a service...</option>
+                                    <option value="laser-cutting">NC Laser Cutting</option>
+                                    <option value="fabrication">Metal Fabrication</option>
+                                    <option value="security">Security Facilities</option>
+                                    <option value="advisory">Advisory Services</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-sm mb-2">Tell Us About Your Project</label>
+                                <textarea name="message" rows="4" required class="form-input w-full bg-charcoal border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none resize-none" placeholder="Describe your project requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary text-white py-4 rounded-lg font-medium">
+                                Send Enquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal mt-16 rounded-3xl overflow-hidden border border-white/10" data-reveal>
+              <div class="bg-black/20 p-4 flex items-center justify-between">
+                <div class="text-xs tracking-[0.22em] uppercase text-white/55">Google Maps</div>
+                <a class="text-sm text-white/75 hover:text-white underline decoration-white/20 hover:decoration-white/50" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=KM%203%20Enugu%E2%80%93Port%20Harcourt%20Expressway%2C%20Independence%20Layout%2C%20Enugu">Open in Maps</a>
+              </div>
+              <iframe title="Smat Emeralds Ltd location" class="w-full h-[360px] md:h-[420px]" loading="eager" fetchpriority="high" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=KM%203%20Enugu%E2%80%93Port%20Harcourt%20Expressway%2C%20Independence%20Layout%2C%20Enugu&output=embed" style="pointer-events:auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-3 mb-6">
+                        <img src="https://i.pinimg.com/736x/88/6d/ca/886dca094d6a2e1a01ea1049f735afe0.jpg" alt="Smat Emeralds Logo" class="h-20 w-auto object-contain rounded-lg bg-white p-1">
+                        <div>
+                            <span class="font-display font-bold text-2xl text-white">SMAT</span>
+                            <span class="text-emerald-400 text-sm block -mt-1 tracking-widest">EMERALDS LTD</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-500 text-lg font-display italic mb-6">SMAT… creating possibilities</p>
+                    <p class="text-gray-600 max-w-md">
+                        Precision metal fabrication, NC laser cutting, and security solutions. Forging the future of Nigerian industrial excellence.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-display font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-500 hover:text-emerald-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-500 hover:text-emerald-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-500 hover:text-emerald-400 transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-500 hover:text-emerald-400 transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-500 hover:text-emerald-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-display font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-500 hover:text-emerald-400 transition-colors">NC Laser Cutting</a></li>
+                        <li><a href="#services" class="text-gray-500 hover:text-emerald-400 transition-colors">Metal Fabrication</a></li>
+                        <li><a href="#services" class="text-gray-500 hover:text-emerald-400 transition-colors">Security Facilities</a></li>
+                        <li><a href="#services" class="text-gray-500 hover:text-emerald-400 transition-colors">Advisory Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-gray-600 text-sm text-center md:text-left">
+                        <p>&copy; 2024 Smat Emeralds Ltd. All rights reserved.</p>
+                        <p class="mt-1">RC 1375893 | Registered in Nigeria</p>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <a href="https://www.youtube.com/@smatemeraldshub" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="YouTube">
+                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M23.498 6.186a3.01 3.01 0 0 0-2.118-2.132C19.503 3.545 12 3.545 12 3.545s-7.503 0-9.38.509A3.01 3.01 0 0 0 .502 6.186 31.29 31.29 0 0 0 0 12a31.29 31.29 0 0 0 .502 5.814 3.01 3.01 0 0 0 2.118 2.132c1.877.509 9.38.509 9.38.509s7.503 0 9.38-.509a3.01 3.01 0 0 0 2.118-2.132A31.29 31.29 0 0 0 24 12a31.29 31.29 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/smat_emeralds/#" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://ng.linkedin.com/in/precious-chinomnso-046605315" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://web.facebook.com/Smatemeralds/?_rdc=1&_rdr#" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a id="whatsapp-fab" href="https://wa.me/2348037925736" target="_blank" class="fixed bottom-8 right-8 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40 whatsapp-float">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Cursor trail canvas overlay (works on mobile too) -->
+    <canvas id="cursor-trail" aria-hidden="true"></canvas>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-charcoal/95', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-charcoal/95', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+
+        // Smooth scrolling (buttery feel) for anchor navigation
+        (function initButteryAnchorScroll() {
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) return;
+
+            const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+            const animateScrollTo = (targetY, duration = 900) => {
+                const startY = window.scrollY || window.pageYOffset;
+                const diff = targetY - startY;
+                const start = performance.now();
+
+                const step = (now) => {
+                    const t = Math.min(1, (now - start) / duration);
+                    const eased = easeOutCubic(t);
+                    window.scrollTo(0, startY + diff * eased);
+                    if (t < 1) requestAnimationFrame(step);
+                };
+
+                requestAnimationFrame(step);
+            };
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+
+                    const target = document.querySelector(href);
+                    if (!target) return;
+
+                    e.preventDefault();
+
+                    // Account for fixed navbar height
+                    const navH = document.getElementById('navbar')?.offsetHeight || 0;
+                    const rect = target.getBoundingClientRect();
+                    const targetY = (window.scrollY || window.pageYOffset) + rect.top - (navH - 8);
+
+                    // Update URL hash without jump
+                    history.pushState(null, '', href);
+
+                    animateScrollTo(targetY);
+                });
+            });
+        })();
+
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-emerald-brand', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                button.classList.add('bg-emerald-brand', 'text-white');
+
+                const filter = button.dataset.filter;
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            const name = (data.name || '').trim();
+            const phone = (data.phone || '').trim();
+            const email = (data.email || '').trim();
+            const projectType = (data.project_type || '').trim();
+            const message = (data.message || '').trim();
+
+            // WhatsApp requires a user action; opening wa.me on submit is the most reliable approach.
+            const waNumber = '2348037925736';
+            const projectTypeLabel = projectType ? projectType : 'Not specified';
+
+            const text =
+`New Enquiry (Website)%0A
+------------------------%0A
+Full Name: ${encodeURIComponent(name)}%0A
+Phone: ${encodeURIComponent(phone)}%0A
+Email: ${encodeURIComponent(email)}%0A
+Project Type: ${encodeURIComponent(projectTypeLabel)}%0A
+Message:%0A${encodeURIComponent(message)}`;
+
+            const waUrl = `https://wa.me/${waNumber}?text=${text}`;
+
+            window.open(waUrl, '_blank');
+            contactForm.reset();
+        });
+
+        function createSpark() {
+            const hero = document.querySelector('.hero-bg');
+            const spark = document.createElement('div');
+            spark.className = 'spark';
+            spark.style.left = Math.random() * 100 + '%';
+            spark.style.top = Math.random() * 50 + '%';
+            spark.style.animationDelay = Math.random() * 2 + 's';
+            hero.appendChild(spark);
+
+            setTimeout(() => {
+                spark.remove();
+            }, 2000);
+        }
+
+        setInterval(createSpark, 500);
+
+        // Prevent the floating WhatsApp button from overlapping footer social icons
+        const whatsappFab = document.getElementById('whatsapp-fab');
+        const footer = document.querySelector('footer');
+
+        function updateFabVisibility() {
+            if (!whatsappFab || !footer) return;
+            const footerRect = footer.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            // If footer enters the viewport, hide the FAB to avoid overlap
+            if (footerRect.top < vh - 40) {
+                whatsappFab.style.opacity = '0';
+                whatsappFab.style.transform = 'translateY(16px)';
+                whatsappFab.style.pointerEvents = 'none';
+            } else {
+                whatsappFab.style.opacity = '1';
+                whatsappFab.style.transform = 'translateY(0)';
+                whatsappFab.style.pointerEvents = 'auto';
+            }
+        }
+
+        window.addEventListener('scroll', updateFabVisibility, { passive: true });
+        window.addEventListener('load', updateFabVisibility);
+        window.addEventListener('resize', updateFabVisibility);
+
+        // Cursor / touch bubble (works on desktop + mobile)
+        (function initCursorBubble() {
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const canvas = document.getElementById('cursor-trail');
+            if (!canvas || prefersReduced) return;
+
+            const ctx = canvas.getContext('2d', { alpha: true });
+            if (!ctx) return;
+
+            const state = {
+                dpr: Math.max(1, Math.min(2, window.devicePixelRatio || 1)),
+                w: 0,
+                h: 0,
+                targetX: window.innerWidth / 2,
+                targetY: window.innerHeight / 2,
+                x: window.innerWidth / 2,
+                y: window.innerHeight / 2,
+                // visual
+                baseR: 14,
+                // pulse
+                rippleT: 0,
+                lastMove: performance.now()
+            };
+
+            function resize() {
+                state.w = Math.floor(window.innerWidth);
+                state.h = Math.floor(window.innerHeight);
+                canvas.width = Math.floor(state.w * state.dpr);
+                canvas.height = Math.floor(state.h * state.dpr);
+                canvas.style.width = state.w + 'px';
+                canvas.style.height = state.h + 'px';
+                ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+            }
+
+            function setTarget(x, y) {
+                state.targetX = x;
+                state.targetY = y;
+                state.lastMove = performance.now();
+                state.rippleT = 1; // start ripple
+            }
+
+            window.addEventListener('pointermove', (e) => {
+                setTarget(e.clientX, e.clientY);
+            }, { passive: true });
+
+            window.addEventListener('touchmove', (e) => {
+                const t = e.touches && e.touches[0];
+                if (!t) return;
+                setTarget(t.clientX, t.clientY);
+            }, { passive: true });
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            function draw(now) {
+                ctx.clearRect(0, 0, state.w, state.h);
+
+                // ease bubble toward target
+                const follow = 0.14;
+                state.x += (state.targetX - state.x) * follow;
+                state.y += (state.targetY - state.y) * follow;
+
+                // subtle idle fade if no movement
+                const idleMs = now - state.lastMove;
+                const idleFade = Math.max(0, 1 - idleMs / 1600);
+                const a = 0.22 * idleFade;
+
+                // bubble radius slightly responds to speed
+                const vx = state.targetX - state.x;
+                const vy = state.targetY - state.y;
+                const speed = Math.min(18, Math.sqrt(vx * vx + vy * vy));
+                const r = state.baseR + speed * 0.35;
+
+                // main bubble (minimal, no glow)
+                ctx.beginPath();
+                ctx.arc(state.x, state.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(248, 249, 250, ${a})`;
+                ctx.fill();
+
+                // optional thin outline for definition
+                ctx.beginPath();
+                ctx.arc(state.x, state.y, r, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(248, 249, 250, ${a * 0.65})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // ripple ring on movement
+                if (state.rippleT > 0) {
+                    state.rippleT = Math.max(0, state.rippleT - 0.035);
+                    const rt = state.rippleT;
+                    const rr = r + (1 - rt) * 26;
+                    ctx.beginPath();
+                    ctx.arc(state.x, state.y, rr, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(248, 249, 250, ${a * 0.45 * rt})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            requestAnimationFrame(draw);
+        })();
+
+        // TextPressure: interactive hero headline (vanilla JS port)
+        (function initTextPressure() {
+            const container = document.getElementById('hero-text-pressure');
+            const title = document.getElementById('tp-title');
+            if (!container || !title) return;
+
+            const lines = Array.from(title.querySelectorAll('.tp-line'));
+
+            const dist = (a, b) => {
+                const dx = b.x - a.x;
+                const dy = b.y - a.y;
+                return Math.sqrt(dx * dx + dy * dy);
+            };
+
+            const getAttr = (distance, maxDist, minVal, maxVal) => {
+                const val = maxVal - Math.abs((maxVal * distance) / maxDist);
+                return Math.max(minVal, val + minVal);
+            };
+
+            const debounce = (func, delay) => {
+                let timeoutId;
+                return (...args) => {
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(() => func.apply(null, args), delay);
+                };
+            };
+
+            const state = {
+                mouse: { x: 0, y: 0 },
+                cursor: { x: 0, y: 0 },
+                spans: [],
+                minFontSize: 28,
+                // feature flags
+                width: true,
+                weight: true,
+                italic: true,
+                alpha: false,
+                scale: false
+            };
+
+            function buildSpans() {
+                state.spans = [];
+                lines.forEach(lineEl => {
+                    const text = lineEl.getAttribute('data-line-text') || '';
+                    const color = lineEl.getAttribute('data-line-color') || '#fff';
+                    lineEl.innerHTML = '';
+
+                    for (let i = 0; i < text.length; i++) {
+                        const ch = text[i];
+                        if (ch === ' ') {
+                            const space = document.createElement('span');
+                            space.className = 'tp-char tp-space';
+                            space.textContent = ' ';
+                            space.style.opacity = '0'; // preserves spacing without visual gap
+                            lineEl.appendChild(space);
+                            state.spans.push(space);
+                            continue;
+                        }
+
+                        const span = document.createElement('span');
+                        span.className = 'tp-char';
+                        span.textContent = ch;
+                        span.dataset.char = ch;
+                        span.style.color = color;
+                        // default settings
+                        span.style.fontVariationSettings = `'wght' 100, 'wdth' 100, 'ital' 0`;
+                        lineEl.appendChild(span);
+                        state.spans.push(span);
+                    }
+                });
+            }
+
+            function setInitialCursor() {
+                const rect = container.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+                state.mouse.x = x;
+                state.mouse.y = y;
+                state.cursor.x = x;
+                state.cursor.y = y;
+            }
+
+            function setSize() {
+                // Determine an appropriate font size based on the widest line length
+                const rect = container.getBoundingClientRect();
+                const containerW = rect.width;
+
+                const longest = Math.max(...lines.map(l => (l.getAttribute('data-line-text') || '').length));
+                let newFontSize = containerW / Math.max(6, (longest / 2));
+                newFontSize = Math.max(newFontSize, state.minFontSize);
+
+                // Apply responsive sizing + tighter line-height to match hero style
+                title.style.fontSize = newFontSize + 'px';
+                title.style.lineHeight = '0.95';
+
+                // Make second line inherit emerald-ish accent like before
+                // (We already color spans, but keep semantic tailwind-like feel by setting line gap)
+                title.style.letterSpacing = '0.01em';
+            }
+
+            function handleMove(clientX, clientY) {
+                state.cursor.x = clientX;
+                state.cursor.y = clientY;
+            }
+
+            window.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
+            window.addEventListener('touchmove', (e) => {
+                const t = e.touches && e.touches[0];
+                if (!t) return;
+                handleMove(t.clientX, t.clientY);
+            }, { passive: true });
+
+            const debouncedSetSize = debounce(() => {
+                setSize();
+                setInitialCursor();
+            }, 100);
+
+            window.addEventListener('resize', debouncedSetSize);
+
+            // Initialize
+            buildSpans();
+            setSize();
+            setInitialCursor();
+
+            // Animation loop
+            let rafId;
+            const animate = () => {
+                // smooth follow
+                state.mouse.x += (state.cursor.x - state.mouse.x) / 15;
+                state.mouse.y += (state.cursor.y - state.mouse.y) / 15;
+
+                const titleRect = title.getBoundingClientRect();
+                const maxDist = Math.max(120, titleRect.width / 2);
+
+                for (const span of state.spans) {
+                    if (!span) continue;
+                    const r = span.getBoundingClientRect();
+                    const center = { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+                    const d = dist(state.mouse, center);
+
+                    const wdth = state.width ? Math.floor(getAttr(d, maxDist, 5, 200)) : 100;
+                    const wght = state.weight ? Math.floor(getAttr(d, maxDist, 100, 900)) : 400;
+                    const italVal = state.italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : '0';
+                    const alphaVal = state.alpha ? getAttr(d, maxDist, 0, 1).toFixed(2) : '1';
+
+                    const fvs = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
+                    if (span.style.fontVariationSettings !== fvs) span.style.fontVariationSettings = fvs;
+                    if (state.alpha && span.style.opacity !== alphaVal) span.style.opacity = alphaVal;
+                }
+
+                rafId = requestAnimationFrame(animate);
+            };
+
+            rafId = requestAnimationFrame(animate);
+
+            // Cleanup on page unload
+            window.addEventListener('beforeunload', () => cancelAnimationFrame(rafId));
+        })();
+    </script>
+</body>
+</html>
