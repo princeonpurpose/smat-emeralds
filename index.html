@@ -28,6 +28,11 @@
         body {
             font-family: 'Inter', sans-serif;
             color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
         }
 
         .font-display {
@@ -35,6 +40,396 @@
         }
 
         .bg-emerald-brand {
+            background-color: var(--emerald);
+        }
+
+        .bg-charcoal {
+            background-color: var(--charcoal);
+        }
+
+        .bg-graphite {
+            background-color: var(--graphite);
+        }
+
+        .text-emerald-brand {
+            color: var(--emerald);
+        }
+
+        .text-steel {
+            color: var(--steel);
+        }
+
+        .border-emerald-brand {
+            border-color: var(--emerald);
+        }
+
+        /* Hero background with overlay */
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(13, 92, 75, 0.85) 0%, rgba(26, 26, 26, 0.92) 100%),
+                        url('https://www.colstanprofiles.co.uk/wp-content/uploads/2024/10/Laser-Cutting-1.jpg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animated gradient line */
+        .gradient-line {
+            background: linear-gradient(90deg, var(--emerald), var(--steel-light), var(--emerald));
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Hover effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(13, 92, 75, 0.15);
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(13, 92, 75, 0.5);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(255,255,255,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #fff;
+        }
+
+        /* Steel texture pattern */
+        .steel-texture {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.03"/></svg>');
+        }
+
+        /* Portfolio grid */
+        .portfolio-item {
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            background: linear-gradient(to top, rgba(13, 92, 75, 0.95) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        /* WhatsApp button */
+        .whatsapp-float {
+            animation: pulse-green 2s infinite;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Spark animation for hero */
+        .spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: spark-fall 2s ease-out infinite;
+        }
+
+        @keyframes spark-fall {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(100px) scale(0); }
+        }
+
+        /* Form input styling */
+        .form-input {
+            transition: all 0.3s ease;
+            border: 1.5px solid #E5E7EB;
+        }
+
+        .form-input:focus {
+            border-color: var(--emerald);
+            box-shadow: 0 0 0 3px rgba(13, 92, 75, 0.1);
+        }
+
+        /* Counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Cursor / touch trail canvas */
+        #cursor-trail {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 45; /* below navbar (50) but above content */
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #cursor-trail { display: none; }
+        }
+
+    </style>
+</head>
+<body class="bg-white antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="https://i.pinimg.com/736x/88/6d/ca/886dca094d6a2e1a01ea1049f735afe0.jpg" alt="Smat Emeralds Logo" class="h-16 w-auto object-contain rounded-lg bg-white p-1">
+                    <div>
+                        <span class="font-display font-bold text-xl text-white">SMAT</span>
+                        <span class="text-emerald-300 text-sm block -mt-1 tracking-widest">EMERALDS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Home</a>
+                    <a href="#about" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">About</a>
+                    <a href="#services" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Services</a>
+                    <a href="#portfolio" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Portfolio</a>
+                    <a href="#why-us" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Why Us</a>
+                    <a href="#contact" class="btn-primary text-white px-6 py-2.5 rounded text-sm font-medium tracking-wide">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-charcoal lg:hidden">
+        <div class="flex justify-end p-6">
+            <button id="mobile-menu-close" class="text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center space-y-8 pt-12">
+            <a href="#home" class="text-white text-2xl font-display mobile-nav-link">Home</a>
+            <a href="#about" class="text-white text-2xl font-display mobile-nav-link">About</a>
+            <a href="#services" class="text-white text-2xl font-display mobile-nav-link">Services</a>
+            <a href="#portfolio" class="text-white text-2xl font-display mobile-nav-link">Portfolio</a>
+            <a href="#why-us" class="text-white text-2xl font-display mobile-nav-link">Why Us</a>
+            <a href="#contact" class="btn-primary text-white px-8 py-3 rounded text-lg font-medium mt-4 mobile-nav-link">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated sparks -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="spark" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+            <div class="spark" style="left: 70%; top: 25%; animation-delay: 0.5s;"></div>
+            <div class="spark" style="left: 85%; top: 40%; animation-delay: 1s;"></div>
+            <div class="spark" style="left: 15%; top: 60%; animation-delay: 1.5s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 reveal">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-white/80 text-sm tracking-wide">Precision Engineering Since Establishment</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 reveal" style="transition-delay: 0.1s;">
+                    Forging Strength.<br>
+                    <span class="text-emerald-300">Engineering Security.</span><br>
+                    Creating Possibilities.
+                </h1>
+
+                <!-- Sub-headline -->
+                <p class="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed reveal" style="transition-delay: 0.2s;">
+                    At Smat Emeralds Ltd, we transform steel into precision-engineered solutions — combining advanced NC laser cutting, expert metal fabrication, and security innovation for modern spaces.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
+                    <a href="#contact" class="btn-primary text-white px-8 py-4 rounded text-center font-medium tracking-wide">
+                        Request a Consultation
+                    </a>
+                    <a href="#portfolio" class="btn-outline text-white px-8 py-4 rounded text-center font-medium tracking-wide">
+                        Explore Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 reveal" style="transition-delay: 0.5s;">
+            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-3 bg-white/60 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-charcoal py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x divide-white/10">
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Registered Nigerian Company <span class="text-emerald-400">(RC 1375893)</span></span>
+                </div>
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Based in Enugu, Nigeria</span>
+                </div>
+                <div class="flex items-center justify-start md:justify-center space-x-3 py-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    <span class="text-white/80 text-sm">Serving Residential, Commercial & Institutional Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Snapshot -->
+    <section class="py-24 lg:py-32 bg-soft-white steel-texture" style="background-color: var(--soft-white);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <span class="text-emerald-brand text-sm font-medium tracking-widest uppercase mb-4 block">Our Philosophy</span>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8 leading-tight">
+                        Metal, Engineered<br>With Intention
+                    </h2>
+                    <div class="w-20 h-1 gradient-line mb-8"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Smat Emeralds Ltd was founded on a simple belief — that metal, when engineered with intention, becomes more than structure. It becomes <span class="text-emerald-brand font-medium">security</span>, <span class="text-emerald-brand font-medium">identity</span>, and <span class="text-emerald-brand font-medium">legacy</span>.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        From precision laser-cut designs to robust security installations, Smat Emeralds stands at the intersection of craftsmanship and technology.
+                    </p>
+                    <a href="#about" class="inline-flex items-center space-x-2 text-emerald-brand font-medium hover:space-x-4 transition-all">
+                        <span>Discover Our Story</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="reveal-right relative">
+                    <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
+                        <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source src="https://v1.pinimg.com/videos/mc/expMp4/5f/16/fa/5f16fa08ab995af6412b64bbafb17081_t1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/20">
+                            <div class="text-center text-white/90">
+                                <p class="text-sm tracking-widest font-bold border border-white/30 px-4 py-2 rounded backdrop-blur-md">PRECISION ENGINEERING</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating stats card -->
+                    <div class="absolute -bottom-8 -left-8 bg-white rounded-lg shadow-xl p-6 reveal" style="transition-delay: 0.3s;">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-emerald-brand/10 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-emerald-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-display font-bold text-charcoal">NC Laser</p>
+                                <p class="text-gray-500 text-sm">Precision Cutting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-24 lg:py-32        .bg-emerald-brand {
             background-color: var(--emerald);
         }
 
