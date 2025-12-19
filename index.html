@@ -28,11 +28,6 @@
         body {
             font-family: 'Inter', sans-serif;
             color: var(--charcoal);
-            overflow-x: hidden;
-        }
-
-        html {
-            overflow-x: hidden;
         }
 
         .font-display {
@@ -179,7 +174,6 @@
         /* WhatsApp button */
         .whatsapp-float {
             animation: pulse-green 2s infinite;
-            transition: opacity 0.25s ease, transform 0.25s ease;
         }
 
         @keyframes pulse-green {
@@ -227,74 +221,6 @@
         .counter {
             font-variant-numeric: tabular-nums;
         }
-
-        /* TextPressure (interactive hero headline) */
-        @font-face {
-            font-family: 'Compressa VF';
-            src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2') format('woff2');
-            font-style: normal;
-            font-display: swap;
-        }
-
-        .text-pressure {
-            position: relative;
-            width: 100%;
-            max-width: 48rem;
-            user-select: none;
-        }
-
-        .text-pressure-title {
-            font-family: 'Compressa VF', 'Playfair Display', serif;
-            text-transform: uppercase;
-            margin: 0;
-            display: block;
-            width: 100%;
-        }
-
-        .tp-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            white-space: nowrap;
-            width: 100%;
-        }
-
-        .tp-char {
-            display: inline-block;
-            will-change: font-variation-settings, opacity;
-            cursor: pointer;
-        }
-
-        /* Make the whole TextPressure area feel interactive */
-        .text-pressure,
-        .text-pressure-title {
-            cursor: pointer;
-        }
-
-        .tp-space {
-            width: 0.45em;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .tp-char {
-                transition: none !important;
-            }
-        }
-
-        /* Cursor / touch trail canvas */
-        #cursor-trail {
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 45; /* below navbar (50) but above content */
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            #cursor-trail { display: none; }
-        }
-
     </style>
 </head>
 <body class="bg-white antialiased">
@@ -368,14 +294,12 @@
                     <span class="text-white/80 text-sm tracking-wide">Precision Engineering Since Establishment</span>
                 </div>
 
-                <!-- Headline (TextPressure) -->
-                <div id="hero-text-pressure" class="text-pressure mb-6 reveal" style="transition-delay: 0.1s;" aria-label="Forging Strength. Engineering Security. Creating Possibilities.">
-                    <h1 id="tp-title" class="text-pressure-title font-bold leading-tight">
-                        <div class="tp-line" data-line-color="#FFFFFF" data-line-text="Forging Strength."></div>
-                        <div class="tp-line" data-line-color="var(--emerald-300, #6ee7b7)" data-line-text="Engineering Security."></div>
-                        <div class="tp-line" data-line-color="#FFFFFF" data-line-text="Creating Possibilities."></div>
-                    </h1>
-                </div>
+                <!-- Headline -->
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 reveal" style="transition-delay: 0.1s;">
+                    Forging Strength.<br>
+                    <span class="text-emerald-300">Engineering Security.</span><br>
+                    Creating Possibilities.
+                </h1>
 
                 <!-- Sub-headline -->
                 <p class="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed reveal" style="transition-delay: 0.2s;">
@@ -609,12 +533,7 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
                 <div class="reveal-left">
                     <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
-                        <img src="https://i.pinimg.com/1200x/8a/2c/c1/8a2cc19d9d3c729dcd148f211cb33127.jpg" alt="Metal fabrication workshop" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
-                            <div class="text-center text-white/90 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
-                                <p class="tracking-widest text-xs font-bold">FABRICATION CRAFT</p>
-                            </div>
-                        </div>
+                        <img src="https://i.pinimg.com/1200x/8a/2c/c1/8a2cc19d9d3c729dcd148f211cb33127.jpg" alt="Metal Fabrication" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="reveal-right">
@@ -679,12 +598,7 @@
                 </div>
                 <div class="reveal-right order-1 lg:order-2">
                     <div class="aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl relative">
-                        <img src="https://i.pinimg.com/1200x/a2/26/c8/a226c8228ca9733d1df26646bb0a7b51.jpg" alt="Security facilities installation" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
-                            <div class="text-center text-white/90 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
-                                <p class="tracking-widest text-xs font-bold">SECURITY SOLUTIONS</p>
-                            </div>
-                        </div>
+                        <img src="https://i.pinimg.com/1200x/a2/26/c8/a226c8228ca9733d1df26646bb0a7b51.jpg" alt="Security Facilities" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -785,6 +699,7 @@
 
             <!-- Portfolio Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="residential">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/1200x/07/ae/02/07ae02b696aae5b12928e28fd189ec9a.jpg" alt="Private Estate Gate" class="w-full h-full object-cover">
@@ -796,6 +711,7 @@
                     </div>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="commercial" style="transition-delay: 0.1s;">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/1200x/b2/ad/d6/b2add69747c4415e51623c58c0c7d27c.jpg" alt="Office Complex Railings" class="w-full h-full object-cover">
@@ -807,6 +723,7 @@
                     </div>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="security" style="transition-delay: 0.2s;">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/736x/89/33/bd/8933bdb3d037f0da6acf7b34313f7931.jpg" alt="Bank Security Installation" class="w-full h-full object-cover">
@@ -818,6 +735,7 @@
                     </div>
                 </div>
 
+                <!-- Project 4 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="residential" style="transition-delay: 0.3s;">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/736x/34/fd/5e/34fd5e8c780c4ed962093d471e95a23d.jpg" alt="Luxury Villa Balustrade" class="w-full h-full object-cover">
@@ -829,6 +747,7 @@
                     </div>
                 </div>
 
+                <!-- Project 5 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="commercial" style="transition-delay: 0.4s;">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/736x/21/44/b0/2144b0a1a0a3952a2c46bc981efab940.jpg" alt="Industrial Storage Tank" class="w-full h-full object-cover">
@@ -840,6 +759,7 @@
                     </div>
                 </div>
 
+                <!-- Project 6 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-lg reveal group" data-category="security" style="transition-delay: 0.5s;">
                     <div class="aspect-[4/3]">
                         <img src="https://i.pinimg.com/736x/5d/18/cb/5d18cb49e2f6ba27f5eb9908b72a9567.jpg" alt="School Perimeter Security" class="w-full h-full object-cover">
@@ -868,6 +788,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
                 <div class="reveal" style="transition-delay: 0.1s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -882,6 +803,7 @@
                     </div>
                 </div>
 
+                <!-- Reason 2 -->
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -897,6 +819,7 @@
                     </div>
                 </div>
 
+                <!-- Reason 3 -->
                 <div class="reveal" style="transition-delay: 0.3s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -911,6 +834,7 @@
                     </div>
                 </div>
 
+                <!-- Reason 4 -->
                 <div class="reveal" style="transition-delay: 0.4s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -925,6 +849,7 @@
                     </div>
                 </div>
 
+                <!-- Reason 5 -->
                 <div class="reveal" style="transition-delay: 0.5s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -939,6 +864,7 @@
                     </div>
                 </div>
 
+                <!-- Reason 6 -->
                 <div class="reveal" style="transition-delay: 0.6s;">
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-emerald-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -993,6 +919,7 @@
     <section id="contact" class="py-24 lg:py-32 bg-charcoal">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
                 <div class="reveal-left">
                     <span class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-4 block">Get in Touch</span>
                     <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -1004,6 +931,7 @@
                     </p>
 
                     <div class="space-y-6">
+                        <!-- Address -->
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1017,6 +945,7 @@
                             </div>
                         </div>
 
+                        <!-- Phone -->
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1029,6 +958,7 @@
                             </div>
                         </div>
 
+                        <!-- Email -->
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 bg-emerald-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1037,12 +967,13 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">Email Us</h4>
-                                <p class="text-gray-400">smatemerald@gmail.com</p>
+                                <p class="text-gray-400">info@smatemeralds.com</p>
                             </div>
                         </div>
                     </div>
 
-                    <a href="https://wa.me/2348037925736" target="_blank" rel="noreferrer" class="inline-flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-lg mt-10 transition-colors whatsapp-float">
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/2348037925736" target="_blank" class="inline-flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-lg mt-10 transition-colors whatsapp-float">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>
@@ -1050,6 +981,7 @@
                     </a>
                 </div>
 
+                <!-- Contact Form -->
                 <div class="reveal-right">
                     <div class="bg-graphite rounded-2xl p-8 lg:p-10">
                         <h3 class="font-display text-2xl font-bold text-white mb-6">Send Us a Message</h3>
@@ -1091,19 +1023,22 @@
                 </div>
             </div>
 
+            <!-- Map -->
             <div class="reveal mt-16 rounded-3xl overflow-hidden border border-white/10" data-reveal>
               <div class="bg-black/20 p-4 flex items-center justify-between">
                 <div class="text-xs tracking-[0.22em] uppercase text-white/55">Google Maps</div>
                 <a class="text-sm text-white/75 hover:text-white underline decoration-white/20 hover:decoration-white/50" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=KM%203%20Enugu%E2%80%93Port%20Harcourt%20Expressway%2C%20Independence%20Layout%2C%20Enugu">Open in Maps</a>
               </div>
-              <iframe title="Smat Emeralds Ltd location" class="w-full h-[360px] md:h-[420px]" loading="eager" fetchpriority="high" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=KM%203%20Enugu%E2%80%93Port%20Harcourt%20Expressway%2C%20Independence%20Layout%2C%20Enugu&output=embed" style="pointer-events:auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <iframe title="Smat Emeralds Ltd location" class="w-full h-[320px]" loading="eager" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=KM%203%20Enugu%E2%80%93Port%20Harcourt%20Expressway%2C%20Independence%20Layout%2C%20Enugu&output=embed"></iframe>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-black py-16">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Logo & Tagline -->
                 <div class="lg:col-span-2">
                     <a href="#" class="flex items-center space-x-3 mb-6">
                         <img src="https://i.pinimg.com/736x/88/6d/ca/886dca094d6a2e1a01ea1049f735afe0.jpg" alt="Smat Emeralds Logo" class="h-20 w-auto object-contain rounded-lg bg-white p-1">
@@ -1118,6 +1053,7 @@
                     </p>
                 </div>
 
+                <!-- Quick Links -->
                 <div>
                     <h4 class="text-white font-display font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
@@ -1129,6 +1065,7 @@
                     </ul>
                 </div>
 
+                <!-- Services -->
                 <div>
                     <h4 class="text-white font-display font-bold mb-6">Services</h4>
                     <ul class="space-y-3">
@@ -1147,23 +1084,24 @@
                         <p class="mt-1">RC 1375893 | Registered in Nigeria</p>
                     </div>
 
+                    <!-- Social Links -->
                     <div class="flex items-center space-x-4">
-                        <a href="https://www.youtube.com/@smatemeraldshub" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="YouTube">
-                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M23.498 6.186a3.01 3.01 0 0 0-2.118-2.132C19.503 3.545 12 3.545 12 3.545s-7.503 0-9.38.509A3.01 3.01 0 0 0 .502 6.186 31.29 31.29 0 0 0 0 12a31.29 31.29 0 0 0 .502 5.814 3.01 3.01 0 0 0 2.118 2.132c1.877.509 9.38.509 9.38.509s7.503 0 9.38-.509a3.01 3.01 0 0 0 2.118-2.132A31.29 31.29 0 0 0 24 12a31.29 31.29 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/smat_emeralds/#" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                        <a href="https://www.instagram.com/smat_emeralds/#" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors">
                             <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                         </a>
-                        <a href="https://ng.linkedin.com/in/precious-chinomnso-046605315" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors">
                             <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                             </svg>
                         </a>
-                        <a href="https://web.facebook.com/Smatemeralds/?_rdc=1&_rdr#" target="_blank" rel="noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-emerald-brand rounded-full flex items-center justify-center transition-colors">
                             <svg class="w-5 h-5 text-gray-400 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
                             </svg>
@@ -1174,25 +1112,25 @@
         </div>
     </footer>
 
-    <a id="whatsapp-fab" href="https://wa.me/2348037925736" target="_blank" class="fixed bottom-8 right-8 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40 whatsapp-float">
+    <!-- Floating WhatsApp Button -->
+    <a id="floating-whatsapp" href="https://wa.me/2348037925736" target="_blank" class="fixed bottom-8 right-8 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-40 whatsapp-float">
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-    <!-- Cursor trail canvas overlay (works on mobile too) -->
-    <canvas id="cursor-trail" aria-hidden="true"></canvas>
-
     <script>
+        // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('bg-charcoal/95', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.add('bg-[#1A1A1A]/95', 'backdrop-blur-md', 'shadow-lg');
             } else {
-                navbar.classList.remove('bg-charcoal/95', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.remove('bg-[#1A1A1A]/95', 'backdrop-blur-md', 'shadow-lg');
             }
         });
 
+        // Mobile menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1212,6 +1150,7 @@
             });
         });
 
+        // Scroll reveal animation
         function reveal() {
             const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
             const windowHeight = window.innerHeight;
@@ -1229,56 +1168,27 @@
         window.addEventListener('scroll', reveal);
         window.addEventListener('load', reveal);
 
-        // Smooth scrolling (buttery feel) for anchor navigation
-        (function initButteryAnchorScroll() {
-            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReduced) return;
-
-            const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
-
-            const animateScrollTo = (targetY, duration = 900) => {
-                const startY = window.scrollY || window.pageYOffset;
-                const diff = targetY - startY;
-                const start = performance.now();
-
-                const step = (now) => {
-                    const t = Math.min(1, (now - start) / duration);
-                    const eased = easeOutCubic(t);
-                    window.scrollTo(0, startY + diff * eased);
-                    if (t < 1) requestAnimationFrame(step);
-                };
-
-                requestAnimationFrame(step);
-            };
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (!href || href === '#') return;
-
-                    const target = document.querySelector(href);
-                    if (!target) return;
-
-                    e.preventDefault();
-
-                    // Account for fixed navbar height
-                    const navH = document.getElementById('navbar')?.offsetHeight || 0;
-                    const rect = target.getBoundingClientRect();
-                    const targetY = (window.scrollY || window.pageYOffset) + rect.top - (navH - 8);
-
-                    // Update URL hash without jump
-                    history.pushState(null, '', href);
-
-                    animateScrollTo(targetY);
-                });
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-        })();
+        });
 
+        // Portfolio filter
         const filterButtons = document.querySelectorAll('.portfolio-filter');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
+                // Update active state
                 filterButtons.forEach(btn => {
                     btn.classList.remove('bg-emerald-brand', 'text-white');
                     btn.classList.add('bg-gray-200', 'text-gray-700');
@@ -1286,6 +1196,7 @@
                 button.classList.remove('bg-gray-200', 'text-gray-700');
                 button.classList.add('bg-emerald-brand', 'text-white');
 
+                // Filter items
                 const filter = button.dataset.filter;
                 portfolioItems.forEach(item => {
                     if (filter === 'all' || item.dataset.category === filter) {
@@ -1305,38 +1216,37 @@
             });
         });
 
+        // Form submission
         const contactForm = document.getElementById('contact-form');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
+            
+            // Get form data
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
-
-            const name = (data.name || '').trim();
-            const phone = (data.phone || '').trim();
-            const email = (data.email || '').trim();
-            const projectType = (data.project_type || '').trim();
-            const message = (data.message || '').trim();
-
-            // WhatsApp requires a user action; opening wa.me on submit is the most reliable approach.
-            const waNumber = '2348037925736';
-            const projectTypeLabel = projectType ? projectType : 'Not specified';
-
-            const text =
-`New Enquiry (Website)%0A
-------------------------%0A
-Full Name: ${encodeURIComponent(name)}%0A
-Phone: ${encodeURIComponent(phone)}%0A
-Email: ${encodeURIComponent(email)}%0A
-Project Type: ${encodeURIComponent(projectTypeLabel)}%0A
-Message:%0A${encodeURIComponent(message)}`;
-
-            const waUrl = `https://wa.me/${waNumber}?text=${text}`;
-
-            window.open(waUrl, '_blank');
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const projectType = formData.get('project_type');
+            const message = formData.get('message');
+            
+            // Construct WhatsApp message
+            const waNumber = "2348037925736";
+            const text = `*New Website Enquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Project Type:* ${projectType}%0A*Message:* ${message}`;
+            const encodedText = encodeURIComponent(text).replace(/%250A/g, '%0A'); // Ensure newlines are handled correctly for URL
+            
+            // Since we manually constructed the text with %0A, we can just use text directly in the URL if we are careful, 
+            // but standard practice is encodeURIComponent. 
+            // Let's use a cleaner template literal approach for readability and encoding.
+            
+            const whatsappMessage = `*New Website Enquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Project Type:* ${projectType}\n*Message:* ${message}`;
+            const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Open WhatsApp
+            window.open(waURL, '_blank');
             contactForm.reset();
         });
 
+        // Add spark animation dynamically
         function createSpark() {
             const hero = document.querySelector('.hero-bg');
             const spark = document.createElement('div');
@@ -1345,7 +1255,7 @@ Message:%0A${encodeURIComponent(message)}`;
             spark.style.top = Math.random() * 50 + '%';
             spark.style.animationDelay = Math.random() * 2 + 's';
             hero.appendChild(spark);
-
+            
             setTimeout(() => {
                 spark.remove();
             }, 2000);
@@ -1353,292 +1263,25 @@ Message:%0A${encodeURIComponent(message)}`;
 
         setInterval(createSpark, 500);
 
-        // Prevent the floating WhatsApp button from overlapping footer social icons
-        const whatsappFab = document.getElementById('whatsapp-fab');
+        // Prevent WhatsApp button overlap with footer
         const footer = document.querySelector('footer');
-
-        function updateFabVisibility() {
-            if (!whatsappFab || !footer) return;
-            const footerRect = footer.getBoundingClientRect();
-            const vh = window.innerHeight || document.documentElement.clientHeight;
-            // If footer enters the viewport, hide the FAB to avoid overlap
-            if (footerRect.top < vh - 40) {
-                whatsappFab.style.opacity = '0';
-                whatsappFab.style.transform = 'translateY(16px)';
-                whatsappFab.style.pointerEvents = 'none';
-            } else {
-                whatsappFab.style.opacity = '1';
-                whatsappFab.style.transform = 'translateY(0)';
-                whatsappFab.style.pointerEvents = 'auto';
-            }
-        }
-
-        window.addEventListener('scroll', updateFabVisibility, { passive: true });
-        window.addEventListener('load', updateFabVisibility);
-        window.addEventListener('resize', updateFabVisibility);
-
-        // Cursor / touch bubble (works on desktop + mobile)
-        (function initCursorBubble() {
-            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const canvas = document.getElementById('cursor-trail');
-            if (!canvas || prefersReduced) return;
-
-            const ctx = canvas.getContext('2d', { alpha: true });
-            if (!ctx) return;
-
-            const state = {
-                dpr: Math.max(1, Math.min(2, window.devicePixelRatio || 1)),
-                w: 0,
-                h: 0,
-                targetX: window.innerWidth / 2,
-                targetY: window.innerHeight / 2,
-                x: window.innerWidth / 2,
-                y: window.innerHeight / 2,
-                // visual
-                baseR: 14,
-                // pulse
-                rippleT: 0,
-                lastMove: performance.now()
-            };
-
-            function resize() {
-                state.w = Math.floor(window.innerWidth);
-                state.h = Math.floor(window.innerHeight);
-                canvas.width = Math.floor(state.w * state.dpr);
-                canvas.height = Math.floor(state.h * state.dpr);
-                canvas.style.width = state.w + 'px';
-                canvas.style.height = state.h + 'px';
-                ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
-            }
-
-            function setTarget(x, y) {
-                state.targetX = x;
-                state.targetY = y;
-                state.lastMove = performance.now();
-                state.rippleT = 1; // start ripple
-            }
-
-            window.addEventListener('pointermove', (e) => {
-                setTarget(e.clientX, e.clientY);
-            }, { passive: true });
-
-            window.addEventListener('touchmove', (e) => {
-                const t = e.touches && e.touches[0];
-                if (!t) return;
-                setTarget(t.clientX, t.clientY);
-            }, { passive: true });
-
-            window.addEventListener('resize', resize);
-            resize();
-
-            function draw(now) {
-                ctx.clearRect(0, 0, state.w, state.h);
-
-                // ease bubble toward target
-                const follow = 0.14;
-                state.x += (state.targetX - state.x) * follow;
-                state.y += (state.targetY - state.y) * follow;
-
-                // subtle idle fade if no movement
-                const idleMs = now - state.lastMove;
-                const idleFade = Math.max(0, 1 - idleMs / 1600);
-                const a = 0.22 * idleFade;
-
-                // bubble radius slightly responds to speed
-                const vx = state.targetX - state.x;
-                const vy = state.targetY - state.y;
-                const speed = Math.min(18, Math.sqrt(vx * vx + vy * vy));
-                const r = state.baseR + speed * 0.35;
-
-                // main bubble (minimal, no glow)
-                ctx.beginPath();
-                ctx.arc(state.x, state.y, r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(248, 249, 250, ${a})`;
-                ctx.fill();
-
-                // optional thin outline for definition
-                ctx.beginPath();
-                ctx.arc(state.x, state.y, r, 0, Math.PI * 2);
-                ctx.strokeStyle = `rgba(248, 249, 250, ${a * 0.65})`;
-                ctx.lineWidth = 1;
-                ctx.stroke();
-
-                // ripple ring on movement
-                if (state.rippleT > 0) {
-                    state.rippleT = Math.max(0, state.rippleT - 0.035);
-                    const rt = state.rippleT;
-                    const rr = r + (1 - rt) * 26;
-                    ctx.beginPath();
-                    ctx.arc(state.x, state.y, rr, 0, Math.PI * 2);
-                    ctx.strokeStyle = `rgba(248, 249, 250, ${a * 0.45 * rt})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-
-                requestAnimationFrame(draw);
-            }
-
-            requestAnimationFrame(draw);
-        })();
-
-        // TextPressure: interactive hero headline (vanilla JS port)
-        (function initTextPressure() {
-            const container = document.getElementById('hero-text-pressure');
-            const title = document.getElementById('tp-title');
-            if (!container || !title) return;
-
-            const lines = Array.from(title.querySelectorAll('.tp-line'));
-
-            const dist = (a, b) => {
-                const dx = b.x - a.x;
-                const dy = b.y - a.y;
-                return Math.sqrt(dx * dx + dy * dy);
-            };
-
-            const getAttr = (distance, maxDist, minVal, maxVal) => {
-                const val = maxVal - Math.abs((maxVal * distance) / maxDist);
-                return Math.max(minVal, val + minVal);
-            };
-
-            const debounce = (func, delay) => {
-                let timeoutId;
-                return (...args) => {
-                    clearTimeout(timeoutId);
-                    timeoutId = setTimeout(() => func.apply(null, args), delay);
-                };
-            };
-
-            const state = {
-                mouse: { x: 0, y: 0 },
-                cursor: { x: 0, y: 0 },
-                spans: [],
-                minFontSize: 28,
-                // feature flags
-                width: true,
-                weight: true,
-                italic: true,
-                alpha: false,
-                scale: false
-            };
-
-            function buildSpans() {
-                state.spans = [];
-                lines.forEach(lineEl => {
-                    const text = lineEl.getAttribute('data-line-text') || '';
-                    const color = lineEl.getAttribute('data-line-color') || '#fff';
-                    lineEl.innerHTML = '';
-
-                    for (let i = 0; i < text.length; i++) {
-                        const ch = text[i];
-                        if (ch === ' ') {
-                            const space = document.createElement('span');
-                            space.className = 'tp-char tp-space';
-                            space.textContent = ' ';
-                            space.style.opacity = '0'; // preserves spacing without visual gap
-                            lineEl.appendChild(space);
-                            state.spans.push(space);
-                            continue;
-                        }
-
-                        const span = document.createElement('span');
-                        span.className = 'tp-char';
-                        span.textContent = ch;
-                        span.dataset.char = ch;
-                        span.style.color = color;
-                        // default settings
-                        span.style.fontVariationSettings = `'wght' 100, 'wdth' 100, 'ital' 0`;
-                        lineEl.appendChild(span);
-                        state.spans.push(span);
+        const floatingBtn = document.getElementById('floating-whatsapp');
+        
+        if (footer && floatingBtn) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        floatingBtn.classList.remove('bottom-8');
+                        floatingBtn.classList.add('bottom-32');
+                    } else {
+                        floatingBtn.classList.remove('bottom-32');
+                        floatingBtn.classList.add('bottom-8');
                     }
                 });
-            }
-
-            function setInitialCursor() {
-                const rect = container.getBoundingClientRect();
-                const x = rect.left + rect.width / 2;
-                const y = rect.top + rect.height / 2;
-                state.mouse.x = x;
-                state.mouse.y = y;
-                state.cursor.x = x;
-                state.cursor.y = y;
-            }
-
-            function setSize() {
-                // Determine an appropriate font size based on the widest line length
-                const rect = container.getBoundingClientRect();
-                const containerW = rect.width;
-
-                const longest = Math.max(...lines.map(l => (l.getAttribute('data-line-text') || '').length));
-                let newFontSize = containerW / Math.max(6, (longest / 2));
-                newFontSize = Math.max(newFontSize, state.minFontSize);
-
-                // Apply responsive sizing + tighter line-height to match hero style
-                title.style.fontSize = newFontSize + 'px';
-                title.style.lineHeight = '0.95';
-
-                // Make second line inherit emerald-ish accent like before
-                // (We already color spans, but keep semantic tailwind-like feel by setting line gap)
-                title.style.letterSpacing = '0.01em';
-            }
-
-            function handleMove(clientX, clientY) {
-                state.cursor.x = clientX;
-                state.cursor.y = clientY;
-            }
-
-            window.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
-            window.addEventListener('touchmove', (e) => {
-                const t = e.touches && e.touches[0];
-                if (!t) return;
-                handleMove(t.clientX, t.clientY);
-            }, { passive: true });
-
-            const debouncedSetSize = debounce(() => {
-                setSize();
-                setInitialCursor();
-            }, 100);
-
-            window.addEventListener('resize', debouncedSetSize);
-
-            // Initialize
-            buildSpans();
-            setSize();
-            setInitialCursor();
-
-            // Animation loop
-            let rafId;
-            const animate = () => {
-                // smooth follow
-                state.mouse.x += (state.cursor.x - state.mouse.x) / 15;
-                state.mouse.y += (state.cursor.y - state.mouse.y) / 15;
-
-                const titleRect = title.getBoundingClientRect();
-                const maxDist = Math.max(120, titleRect.width / 2);
-
-                for (const span of state.spans) {
-                    if (!span) continue;
-                    const r = span.getBoundingClientRect();
-                    const center = { x: r.left + r.width / 2, y: r.top + r.height / 2 };
-                    const d = dist(state.mouse, center);
-
-                    const wdth = state.width ? Math.floor(getAttr(d, maxDist, 5, 200)) : 100;
-                    const wght = state.weight ? Math.floor(getAttr(d, maxDist, 100, 900)) : 400;
-                    const italVal = state.italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : '0';
-                    const alphaVal = state.alpha ? getAttr(d, maxDist, 0, 1).toFixed(2) : '1';
-
-                    const fvs = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
-                    if (span.style.fontVariationSettings !== fvs) span.style.fontVariationSettings = fvs;
-                    if (state.alpha && span.style.opacity !== alphaVal) span.style.opacity = alphaVal;
-                }
-
-                rafId = requestAnimationFrame(animate);
-            };
-
-            rafId = requestAnimationFrame(animate);
-
-            // Cleanup on page unload
-            window.addEventListener('beforeunload', () => cancelAnimationFrame(rafId));
-        })();
+            }, { threshold: 0.1 });
+            
+            observer.observe(footer);
+        }
     </script>
 </body>
 </html>
